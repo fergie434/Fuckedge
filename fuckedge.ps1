@@ -25,6 +25,7 @@ while($true)
     else {
         if ( (Get-MpPreference).DisableRealtimeMonitoring){
             Set-MpPreference -DisableRealtimeMonitoring $false
+            WriteLog("Enabled AV")
         }
     }
 start-sleep -seconds 3

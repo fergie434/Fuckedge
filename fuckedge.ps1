@@ -16,7 +16,7 @@ while($true)
     }
 
 
-    if ((get-process | Where-Object { $_.ProcessName -Like "*Diablo*" -or $_.ProcessName -like "*Cyber*"}).count -ne 0){
+    if ((get-process | Where-Object { $_.ProcessName -Like "*Diablo*" -or $_.ProcessName -like "*Cyber*" -or $_.ProcessName -like "*Overwatch*"}).count -ne 0){
         if (-not (Get-MpPreference).DisableRealtimeMonitoring){
             Set-MpPreference -DisableRealtimeMonitoring $true
             WriteLog("Disabled AV")
